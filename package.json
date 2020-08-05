@@ -1,0 +1,27 @@
+{
+  "name": "todo-vite-react",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@pika/react": "^16.13.1",
+    "@pika/react-dom": "^16.13.1",
+    "emotion-theming": "^10.0.27",
+    "mobx": "^5.15.4",
+    "mobx-react-lite": "^2.0.7",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/uuid": "^8.0.0",
+    "typescript": "^3.9.3",
+    "vite": "^1.0.0-rc.1",
+    "vite-plugin-react": "^3.0.0"
+  }
+}
