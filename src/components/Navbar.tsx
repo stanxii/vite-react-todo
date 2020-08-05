@@ -33,7 +33,7 @@ const Navbar = () => {
       justify="space-between"
       wrap="wrap"
       padding="1.5rem"
-      bg="teal.500"
+      bg="blue.500"
       color="white"
     >
       <Flex align="center" mr={5}>

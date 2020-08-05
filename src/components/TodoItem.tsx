@@ -51,7 +51,6 @@ const TodoItem: React.FC<ITodoItemProps> = ({
           {title}
         </Text>
         <Box>
-          <IconButton aria-label="Edit todo" icon="edit" />
           <IconButton
             ml="2"
             aria-label="Delete todo"
