@@ -1,10 +1,22 @@
 import React from 'react';
-import { Box, Heading, Flex, Link, Button } from '@chakra-ui/core';
+import { Link as RouterLink } from 'react-router-dom';
+import { Box, Heading, Flex, Link } from '@chakra-ui/core';
 
-const MenuItems: React.FC = (props) => {
-  const { children } = props;
+interface IMenuItemProps {
+  children: React.ReactNode;
+  to: string;
+}
+
+const MenuItem: React.FC<IMenuItemProps> = (props) => {
+  const { children, to } = props;
   return (
-    <Link mt={{ base: 4, md: 0 }} mr={6} display="block">
+    <Link
+      as={RouterLink}
+      to={to}
+      mt={{ base: 4, md: 0 }}
+      mr={6}
+      display="block"
+    >
       {children}
     </Link>
   );
@@ -26,7 +38,7 @@ const Navbar = () => {
     >
       <Flex align="center" mr={5}>
         <Heading as="h1" size="lg" letterSpacing={'-.1rem'}>
-          Chakra UI
+          React + Chakra + MobX
         </Heading>
       </Flex>
 
@@ -48,8 +60,8 @@ const Navbar = () => {
         alignItems="center"
         flexGrow={1}
       >
-        <MenuItems>Todo</MenuItems>
-        <MenuItems>Other Page</MenuItems>
+        <MenuItem to="/">Todo</MenuItem>
+        <MenuItem to="/other">Other Page</MenuItem>
       </Box>
     </Flex>
   );

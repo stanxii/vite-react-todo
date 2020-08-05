@@ -1,5 +1,5 @@
-import { observable, action, computed, reaction } from "mobx"
-import { v4 as uuidv4 } from "uuid"
+import { observable, action, computed } from "mobx"
+import { v4 as uuidv4 } from "uuid";
 
 export interface Todo {
   id: string;

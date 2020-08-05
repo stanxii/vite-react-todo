@@ -14,11 +14,13 @@
     "emotion-theming": "^10.0.27",
     "mobx": "^5.15.4",
     "mobx-react-lite": "^2.0.7",
+    "react-router-dom": "^5.2.0",
     "uuid": "^8.3.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
     "@types/uuid": "^8.0.0",
     "typescript": "^3.9.3",
     "vite": "^1.0.0-rc.1",

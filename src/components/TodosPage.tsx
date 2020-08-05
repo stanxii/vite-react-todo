@@ -8,7 +8,7 @@ import TodoItem from './TodoItem';
 import { useStores } from '../hooks/use-stores';
 import { Filters } from '../stores/todo-store';
 
-const TodosContainer = () => {
+const TodosPage = () => {
   const { todoStore } = useStores();
   const filterTypes = ['All', 'Completed', 'Active'];
 
@@ -60,4 +60,4 @@ const TodosContainer = () => {
   ));
 };
 
-export default TodosContainer;
+export default TodosPage;
