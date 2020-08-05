@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Box,
   Flex,
@@ -6,6 +6,7 @@ import {
   Text,
   IconButton,
   useToast,
+  useClipboard,
 } from '@chakra-ui/core';
 
 import { Todo } from '../stores/todo-store';
@@ -26,6 +27,19 @@ const TodoItem: React.FC<ITodoItemProps> = ({
   toggleTodo,
 }) => {
   const toast = useToast();
+  const { onCopy, hasCopied } = useClipboard(title);
+
+  useEffect(() => {
+    if (hasCopied) {
+      toast({
+        title: 'Success',
+        description: 'Copied to clipboard',
+        status: 'success',
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  }, [hasCopied]);
 
   const handleRemoveTodo = (id: string) => {
     removeTodo(id);
@@ -51,6 +65,11 @@ const TodoItem: React.FC<ITodoItemProps> = ({
           {title}
         </Text>
         <Box>
+          <IconButton
+            aria-label="Copy to clipboard"
+            icon="copy"
+            onClick={onCopy}
+          />
           <IconButton
             ml="2"
             aria-label="Delete todo"
